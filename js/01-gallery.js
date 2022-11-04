@@ -47,6 +47,11 @@ galleryRef.innerHTML = createListMarkup(galleryItems);
 
 function onGalleryImgClick(e) {
     e.preventDefault();
+    if (e.target === e.currentTarget) {
+        return;
+    }
+
+    console.log(e.target, e.currentTarget);
 
     const instance = basicLightbox.create(
         `
