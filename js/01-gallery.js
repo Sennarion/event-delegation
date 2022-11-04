@@ -50,9 +50,7 @@ function onGalleryImgClick(e) {
     if (e.target === e.currentTarget) {
         return;
     }
-
-    console.log(e.target, e.currentTarget);
-
+    
     const instance = basicLightbox.create(
         `
     <img src="${e.target.dataset.source}" width="800" height="600">`,
